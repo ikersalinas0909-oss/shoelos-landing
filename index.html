@@ -1,1 +1,97 @@
-PAGINA PRINCIPAL hol html aqui va
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe-los | Limpieza de tenis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: linear-gradient(135deg, #ffcc00, #ff6600);
+      color: #222;
+    }
+    header {
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 80px;
+    }
+    h1 {
+      margin: 15px 0;
+      font-size: 2.5em;
+      color: #ff3300;
+    }
+    .precio {
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      background: #222;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .galeria img {
+      width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      background: #25d366;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #128c7e;
+    }
+    footer {
+      background: #fff;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Shoe-los">
+  </header>
+
+  <main>
+    <h1>Limpieza Profesional de Tenis</h1>
+    <p class="precio">¡Solo $100 MXN!</p>
+
+    <section class="galeria">
+      <img src="antes1.png" alt="Tenis antes de limpieza">
+      <img src="despues1.png" alt="Tenis después de limpieza">
+      <img src="antes2.png" alt="Crocs antes de limpieza">
+      <img src="despues2.png" alt="Crocs después de limpieza">
+    </section>
+
+    <a href="https://wa.me/528180515309?text=Hola%20quiero%20una%20limpieza%20de%20tenis" class="btn">¡Agenda por WhatsApp!</a>
+  </main>
+ 
