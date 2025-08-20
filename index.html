@@ -9,50 +9,86 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #fdfdfd;
       color: #333;
-      animation: fadeIn 1s ease-in;
     }
+
     header {
+      background: #0d47a1;
+      color: white;
       padding: 20px;
-      background: #ffffff;
-      border-bottom: 2px solid #e0e0e0;
       text-align: center;
     }
     header img {
-      height: 80px;
-      animation: fadeDown 1s ease-in-out;
+      height: 70px;
+      margin-bottom: 10px;
     }
-    h1 {
-      margin: 20px 0 10px;
-      font-size: 2.2em;
-      color: #2a2a2a;
-      animation: fadeInUp 1s ease;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #e3f2fd;
+    }
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
     .precio {
       font-size: 1.8em;
       font-weight: bold;
-      color: #0056d6;
-      background: #eaf1ff;
+      color: #0d47a1;
+      background: #bbdefb;
       display: inline-block;
       padding: 10px 20px;
       border-radius: 8px;
       margin-bottom: 20px;
-      animation: pulse 2s infinite;
     }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      background: #25d366;
+      color: #fff;
+      border-radius: 30px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .btn:hover {
+      background: #128c7e;
+      transform: scale(1.05);
+    }
+
     .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: 0 auto;
+    }
+    .galeria h3 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
     .card {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      padding: 15px;
+      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
@@ -61,80 +97,65 @@
     }
     .card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
+      display: block;
     }
-    .btn {
-      display: inline-block;
-      margin: 30px auto;
-      padding: 15px 25px;
-      font-size: 1.1em;
+    .card p {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
       font-weight: bold;
-      text-decoration: none;
-      background: #25d366;
-      color: #fff;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .btn:hover {
-      background: #128c7e;
-      transform: scale(1.05);
-    }
-    footer {
-      background: #fff;
-      padding: 15px;
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #666;
-      border-top: 1px solid #e0e0e0;
     }
 
-    /* Animaciones */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    footer {
+      background: #0d47a1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
     }
-    @keyframes fadeDown {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo Shoe-los">
+    <h1>Shoe-los</h1>
+    <p>Expertos en limpieza profesional de tenis</p>
   </header>
 
-  <main>
-    <h1>Limpieza Profesional de Tenis</h1>
-    <p class="precio">¡Solo $100 MXN!</p>
+  <section class="hero">
+    <h2>¡Dale nueva vida a tus tenis!</h2>
+    <p class="precio">Limpieza completa por solo $100 MXN</p>
+    <br>
+    <a href="https://wa.me/528180515309?text=Hola%20quiero%20una%20limpieza%20de%20tenis" class="btn">Agendar vía WhatsApp</a>
+  </section>
 
-    <section class="galeria">
+  <section class="galeria">
+    <h3>Resultados Antes y Después</h3>
+    <div class="grid">
       <div class="card">
         <img src="antes1.png" alt="Antes limpieza 1">
         <img src="despues1.png" alt="Después limpieza 1">
+        <p>Tenis blancos rejuvenecidos</p>
       </div>
       <div class="card">
         <img src="antes2.png" alt="Antes limpieza 2">
         <img src="despues2.png" alt="Después limpieza 2">
+        <p>Tenis deportivos renovados</p>
       </div>
-    </section>
-
-    <a href="https://wa.me/528180515309?text=Hola%20quiero%20una%20limpieza%20de%20tenis" class="btn">¡Agenda por WhatsApp!</a>
-  </main>
+      <div class="card">
+        <img src="antes3.png" alt="Antes limpieza 3">
+        <img src="despues3.png" alt="Después limpieza 3">
+        <p>Detalles impecables</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Shoe-los. Servicio de limpieza de tenis en Monterrey.
+    <p>📞 Tel: +52 81 8051 5309</p>
+    <p>© 2025 Shoe-los | Monterrey, México</p>
   </footer>
 </body>
 </html>
