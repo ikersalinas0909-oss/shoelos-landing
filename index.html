@@ -48,7 +48,7 @@
     }
 
     header img {
-      height: 160px; /* Logo grande */
+      height: 130px; /* Logo grande */
       position: absolute;
       left: 20px;
       top: 50%;
@@ -166,66 +166,6 @@
       margin-top: 40px;
       animation: fadeUp 2s ease;
     }
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="../Imagens/Logo chido.png" alt="Logo Shoe-los">
-    <h1>Shoe-los</h1>
-    <p>Expertos en limpieza profesional de tenis</p>
-  </header>
-
-  <section class="hero">
-    <h2>¡Dale nueva vida a tus tenis!</h2>
-    <p class="precio">Limpieza completa por solo $100 MXN</p>
-    <br>
-    <a href="https://wa.me/528180515309?text=Hola%20quiero%20una%20limpieza%20de%20tenis" class="btn">Agendar vía WhatsApp</a>
-  </section>
-
-  <section class="galeria">
-    <h3>Resultados Antes y Después</h3>
-    <div class="grid">
-      <div class="card">
-        <img src="../Imagens/Limpieza antes 1.jpg" alt="Antes limpieza 1">
-        <p>Tenis blancos rejuvenecidos</p>
-      </div>
-      <div class="card">
-        <img src="../Imagens/Antes y despues 2.jpg" alt="Antes limpieza 2">
-        <p>Tenis deportivos renovados</p>
-      </div>
-      <div class="card">
-        <img src="../Imagens/Diseño sin título (3).png" alt="Antes limpieza 3">
-        <p>Detalles impecables</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>📞 Tel: +52 81 8051 5309</p>
-    <p>© 2025 Shoe-los | Monterrey, México</p>
-  </footer>
-
-  <script>
-    // Animación cuando haces scroll (cards aparecen)
-    const cards = document.querySelectorAll('.card');
-    const showCards = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if (cardTop < triggerBottom) {
-          card.classList.add('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', showCards);
-    showCards();
-  </script>
-</body>
-</html>
-
     footer p {
       margin: 5px 0;
     }
