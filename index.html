@@ -16,16 +16,26 @@
 
     /* Animaciones */
     @keyframes fadeZoom {
-      from { opacity: 0; transform: scale(0.8); }
+      from { opacity: 0; transform: scale(0.7); }
       to { opacity: 1; transform: scale(1); }
     }
     @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-40px); }
+      from { opacity: 0; transform: translateY(-50px); }
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
+      from { opacity: 0; transform: translateY(50px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+      40% {transform: translateY(-15px);} 
+      60% {transform: translateY(-7px);} 
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
 
     header {
@@ -38,28 +48,30 @@
     header img {
       height: 90px;
       margin-bottom: 10px;
-      animation: fadeZoom 1s ease;
+      animation: fadeZoom 1.2s ease, bounce 2s ease 1.2s;
     }
     header h1 {
       margin: 0;
       font-size: 2.2em;
       font-weight: bold;
-      animation: slideDown 1.2s ease;
+      animation: slideDown 1.3s ease;
     }
 
     .hero {
       text-align: center;
       padding: 40px 20px;
       background: #e3f2fd;
-      animation: fadeUp 1.2s ease;
+      animation: fadeUp 1.5s ease;
     }
     .hero h2 {
       font-size: 2em;
       margin-bottom: 10px;
+      animation: fadeUp 1.8s ease;
     }
     .hero p {
       font-size: 1.2em;
       margin-bottom: 20px;
+      animation: fadeUp 2s ease;
     }
     .precio {
       font-size: 1.8em;
@@ -70,7 +82,7 @@
       padding: 10px 20px;
       border-radius: 8px;
       margin-bottom: 20px;
-      animation: fadeZoom 1.5s ease;
+      animation: fadeZoom 2.2s ease;
     }
 
     .btn {
@@ -83,23 +95,23 @@
       color: #fff;
       border-radius: 30px;
       transition: transform 0.3s ease, background 0.3s ease;
-      animation: fadeUp 2s ease;
+      animation: pulse 2s infinite 2.5s;
     }
     .btn:hover {
       background: #128c7e;
-      transform: scale(1.1) rotate(-2deg);
+      transform: scale(1.15) rotate(-2deg);
     }
 
     .galeria {
       padding: 40px 20px;
       max-width: 1000px;
       margin: 0 auto;
-      animation: fadeUp 1.5s ease;
     }
     .galeria h3 {
       text-align: center;
       font-size: 1.8em;
       margin-bottom: 30px;
+      animation: slideDown 1.5s ease;
     }
     .grid {
       display: grid;
@@ -111,17 +123,18 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1.2s ease forwards;
+      transform: scale(0.8);
     }
-    .card:nth-child(1) { animation-delay: 0.3s; }
-    .card:nth-child(2) { animation-delay: 0.6s; }
-    .card:nth-child(3) { animation-delay: 0.9s; }
+    .card.visible {
+      opacity: 1;
+      transform: scale(1);
+      animation: fadeZoom 0.8s ease forwards;
+    }
     .card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     .card img {
       width: 100%;
@@ -140,7 +153,7 @@
       padding: 20px;
       text-align: center;
       margin-top: 40px;
-      animation: slideDown 1.2s ease;
+      animation: fadeUp 2s ease;
     }
     footer p {
       margin: 5px 0;
@@ -186,5 +199,21 @@
     <p>📞 Tel: +52 81 8051 5309</p>
     <p>© 2025 Shoe-los | Monterrey, México</p>
   </footer>
+
+  <script>
+    // Animación cuando haces scroll (cards aparecen)
+    const cards = document.querySelectorAll('.card');
+    const showCards = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          card.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', showCards);
+    showCards();
+  </script>
 </body>
 </html>
