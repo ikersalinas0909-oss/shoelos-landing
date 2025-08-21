@@ -41,29 +41,24 @@
     header {
       background: #0d47a1;
       color: white;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 30px 20px;
+      text-align: center;
       animation: slideDown 1s ease;
     }
     header img {
-      height: 90px;
+      height: 160px; /* Logo más grande */
+      margin-bottom: 20px;
       animation: fadeZoom 1.2s ease, bounce 2s ease 1.2s;
     }
     header h1 {
       margin: 0;
-      font-size: 3em; /* Más grande */
+      font-size: 3em; /* Título más grande */
       font-weight: bold;
       animation: slideDown 1.3s ease;
     }
     header p {
-      margin: 5px 0 0;
-      font-size: 1.1em;
-      animation: slideDown 1.5s ease;
-    }
-    .header-text {
-      text-align: right;
+      margin-top: 10px;
+      font-size: 1.3em;
     }
 
     .hero {
@@ -172,10 +167,8 @@
 <body>
   <header>
     <img src="../Imagens/Logo chido.png" alt="Logo Shoe-los">
-    <div class="header-text">
-      <h1>Shoe-los</h1>
-      <p>Expertos en limpieza profesional de tenis</p>
-    </div>
+    <h1>Shoe-los</h1>
+    <p>Expertos en limpieza profesional de tenis</p>
   </header>
 
   <section class="hero">
@@ -225,4 +218,3 @@
   </script>
 </body>
 </html>
-
